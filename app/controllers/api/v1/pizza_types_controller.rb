@@ -1,5 +1,5 @@
 class Api::V1::PizzaTypesController < ApplicationController
-  before_action :find_pizza_types, only: [:update]
+  before_action :find_pizza_type, only: [:update]
 
   def index
     @pizza_types = PizzaType.all
@@ -7,25 +7,23 @@ class Api::V1::PizzaTypesController < ApplicationController
   end
 
   def create
-    @pizza_types = PizzaType.new(pizza_types_params)
-
-    @pizza_types.user = @current_user
-    @pizza_types.save
-    render json: @pizza_types
+    @pizza_type = PizzaType.new(pizza_type_params)
+    @pizza_type.save
+    render json: @pizza_type
   end
 
   def update
-    @pizza_types.update(pizza_types_params)
-    render json: @pizza_types
+    @pizza_type.update(pizza_types_params)
+    render json: @pizza_type
   end
 
   private
 
-  def find_pizza_types
-    @pizza_types = PizzaType.find(params[:id])
+  def find_pizza_type
+    @pizza_type = PizzaType.find(params[:id])
   end
 
-  def pizza_types_params
-    params.require(:pizza_types).permit(:name, :price)
+  def pizza_type_params
+    params.require(:pizza_type).permit(:name, :price)
   end
 end

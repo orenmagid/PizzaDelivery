@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_03_151609) do
+ActiveRecord::Schema.define(version: 2019_04_04_232008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.string "full_address"
+    t.decimal "latitude"
+    t.decimal "longitude"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "order_items", force: :cascade do |t|
     t.integer "pizza_type_id"
@@ -24,7 +33,9 @@ ActiveRecord::Schema.define(version: 2019_04_03_151609) do
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
     t.string "date_time"
-    t.string "address"
+    t.string "address_id"
+    t.integer "tax"
+    t.integer "total"
   end
 
   create_table "pizza_types", force: :cascade do |t|

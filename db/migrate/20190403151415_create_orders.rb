@@ -3,7 +3,9 @@ class CreateOrders < ActiveRecord::Migration[5.2]
     create_table :orders do |t|
       t.integer :user_id
       t.string :date_time
-      t.string :address
+      t.string :address_id
+      t.integer :tax
+      t.integer :total
     end
   end
 end
