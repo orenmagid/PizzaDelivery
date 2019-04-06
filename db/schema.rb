@@ -34,8 +34,9 @@ ActiveRecord::Schema.define(version: 2019_04_04_232008) do
     t.integer "user_id"
     t.string "date_time"
     t.string "address_id"
-    t.integer "tax"
-    t.integer "total"
+    t.decimal "tax"
+    t.decimal "total"
+    t.decimal "discount"
   end
 
   create_table "pizza_types", force: :cascade do |t|

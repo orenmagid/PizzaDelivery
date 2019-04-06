@@ -4,8 +4,9 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.integer :user_id
       t.string :date_time
       t.string :address_id
-      t.integer :tax
-      t.integer :total
+      t.decimal :tax
+      t.decimal :total
+      t.decimal :discount
     end
   end
 end

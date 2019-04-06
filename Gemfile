@@ -51,3 +51,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'active_model_serializers'
 
 gem 'geocoder'
+
+gem 'rspec-rails', '~> 3.5'
+
+gem 'rswag'

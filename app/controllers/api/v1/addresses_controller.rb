@@ -1,4 +1,4 @@
-class AddressesController < ApplicationController
+class Api::V1::AddressesController < ApplicationController
   before_action :find_addresses, only: [:update]
 
   def index
@@ -7,11 +7,14 @@ class AddressesController < ApplicationController
   end
 
   def create
-    @address = Address.new(addresses_params)
+    @address = Address.new(address_params)
 
     @address.user = @current_user
-    @address.save
-    render json: @address
+    if @address.save
+      render json: @address
+    else
+      render json: { error: 'There was a problem with the address you entered. Please try again.' }
+    end
   end
 
   def update
@@ -21,11 +24,11 @@ class AddressesController < ApplicationController
 
   private
 
-  def find_addresses
+  def find_address
     @address = Address.find(params[:id])
   end
 
   def address_params
-    params.require(:addresses).permit(:full_address, :longitude, :lattitude, :user_id)
+    params.require(:address).permit(:full_address, :longitude, :lattitude, :user_id)
   end
 end
