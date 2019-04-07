@@ -19,20 +19,27 @@ class Api::V1::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       token = encode(user_id: @user.id)
-      render json: { token: token, status: :accepted, success: true, user: @user }
-      # render json: @user, status: :accepted
+      render json: { token: token, status: :accepted, success: true }
     else
-      render json: { errors: @user.errors.full_messages }, status: :unprocessible_entity
+      render json: { errors: @user.errors.full_messages, status: :unprocessible_entity }
     end
   end
 
   def update
+    params[:user].delete(:password) if params[:user][:password].blank?
+
     @current_user.update(user_params)
     if @current_user.save
       render json: @current_user, status: :accepted
     else
-      render json: { errors: @current_user.errors.full_messages }, status: :unprocessible_entity
+      render json: { errors: @current_user.errors.full_messages, status: :unprocessible_entity }
     end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    render json: { user: @user, status: :ok }
   end
 
   private

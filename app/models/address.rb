@@ -3,18 +3,25 @@ class Address < ApplicationRecord
   belongs_to :user
   has_many :orders
 
-  validates :full_address, presence: true, allow_blank: false
+  validates :location, presence: true, allow_blank: false
   validates :user_id, presence: true
+  validate :within_range_of_chronicle, if: -> { location != '1255 23rd St NW, Washington, DC 20037' }
 
-  geocoded_by :full_address
-  after_validation :geocode, if: ->(obj) { obj.full_address.present? && obj.full_address_changed? }
+  geocoded_by :location
+  after_validation :geocode, if: ->(obj) { obj.location.present? && obj.location_changed? }
 
-  def self.too_far_from_chronicle(order_address)
+  private
+
+  def within_range_of_chronicle
     chronicle_address = Address.find(1)
-    distance_from_chronicle =
-      chronicle_address.distance_from([order_address.latitude, order_address.longitude])
-    return distance_from_chronicle if distance_from_chronicle > 25
 
-    false
+    coordinates = Geocoder.search(location).first.coordinates
+
+    distance_from_chronicle =
+      chronicle_address.distance_from([coordinates[0], coordinates[1]])
+
+    error = "You are #{distance_from_chronicle} miles from the Chronicle. We are located at 1255 23rd St NW # 700, Washington, DC 20037. Let us know when you are a bit closer, and we would be happy to deliver."
+
+    errors.add(:base, error) if distance_from_chronicle > 25
   end
 end

@@ -1,42 +1,54 @@
 require 'pry'
 
 class Api::V1::OrdersController < ApplicationController
-  before_action :find_order, only: [:update]
+  before_action :find_order, only: %i[show update destroy]
 
   def index
     @orders = Order.all
     render json: @orders
   end
 
+  def show
+    render json: @order
+  end
+
   def create
     address = Address.find(params[:order][:address_id])
-    too_far = Address.too_far_from_chronicle(address)
-    error = 'You are more than 25 miles from the Chronicle. We are located at 1255 23rd St NW # 700, Washington, DC 20037. Let us know when you are a bit closer, and we would be happy to deliver.'
-    if too_far
-      render json: { error: error }
-
+    @order = Order.new
+    order_items = params[:order][:order_items] || params[:order_items]
+    if order_items.length === 0
+      render json: { errors: 'Please add items to your order.' }
     else
-      @order = Order.new
-      order_items = params[:order][:order_items] || params[:order_items]
+
       order_items.each do |order_item|
         order_item.permit!
         @item = OrderItem.new(order_item)
         @order.order_items << @item
+
+        @order.calculate_tax_and_total
+        @order.address = address
+        @order.user = @current_user
+        @order.date_time = Time.now
+        if @order.save
+          render json: @order
+        else
+          render json: { errors: @order.errors.full_messages }
+        end
       end
-      @order.calculate_tax_and_total
-      @order.address = address
-      @order.user = @current_user
-      @order.date_time = Time.now
-      @order.save
-
-      render json: { order: @order, status: 201 }
-
     end
   end
 
   def update
-    @order.update(order_params)
-    render json: @order
+    if @order.update(order_params)
+      render json: @order
+    else
+      render json: { errors: @order.errors.full_messages }
+    end
+  end
+
+  def destroy
+    @order.destroy
+    render json: { order: @order, status: :ok }
   end
 
   private

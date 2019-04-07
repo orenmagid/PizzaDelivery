@@ -1,25 +1,38 @@
 class Api::V1::AddressesController < ApplicationController
-  before_action :find_addresses, only: [:update]
+  before_action :find_address, only: %i[update show destroy]
 
   def index
     @addresses = Address.all
     render json: @addresses
   end
 
+  def show
+    render json: @address
+  end
+
   def create
     @address = Address.new(address_params)
-
     @address.user = @current_user
+
     if @address.save
+
       render json: @address
     else
-      render json: { error: 'There was a problem with the address you entered. Please try again.' }
+      render json: { errors: @address.errors.full_messages }
     end
   end
 
   def update
-    @address.update(address_params)
-    render json: @address
+    if @address.update(address_params)
+      render json: @address
+    else
+      render json: { errors: @address.errors.full_messages }
+    end
+  end
+
+  def destroy
+    @address.destroy
+    render json: { address: @address, status: :ok }
   end
 
   private
@@ -29,6 +42,6 @@ class Api::V1::AddressesController < ApplicationController
   end
 
   def address_params
-    params.require(:address).permit(:full_address, :longitude, :lattitude, :user_id)
+    params.require(:address).permit(:location, :longitude, :lattitude, :user_id)
   end
 end
