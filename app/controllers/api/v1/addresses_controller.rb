@@ -16,9 +16,9 @@ class Api::V1::AddressesController < ApplicationController
 
     if @address.save
 
-      render json: @address
+      render json: { address: @address }, status: :created
     else
-      render json: { errors: @address.errors.full_messages }
+      render json: { errors: @address.errors.full_messages }, status: 500
     end
   end
 
@@ -26,13 +26,13 @@ class Api::V1::AddressesController < ApplicationController
     if @address.update(address_params)
       render json: @address
     else
-      render json: { errors: @address.errors.full_messages }
+      render json: { errors: @address.errors.full_messages, status: :bad_request }
     end
   end
 
   def destroy
     @address.destroy
-    render json: { address: @address, status: :ok }
+    render json: { address: @address }, status: :ok
   end
 
   private
