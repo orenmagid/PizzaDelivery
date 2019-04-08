@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Documentation for this API can be found <a href="https://documenter.getpostman.com/view/4700349/S1EJYgvj">here</a>.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This repository includes `ChroniclePizza V1.postman_collection.json` and `ChroniclePizza_2019-04-07.json`, which can be imported into <a href="https://www.getpostman.com/">Postman</> and <a href="https://insomnia.rest/">Insomnia REST Client<a/>, respectively, and used to send requests. 
