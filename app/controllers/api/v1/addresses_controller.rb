@@ -3,11 +3,11 @@ class Api::V1::AddressesController < ApplicationController
 
   def index
     @addresses = Address.all
-    render json: @addresses
+    render json: @addresses, status: :ok
   end
 
   def show
-    render json: @address
+    render json: @address, status: :ok
   end
 
   def create
@@ -16,23 +16,23 @@ class Api::V1::AddressesController < ApplicationController
 
     if @address.save
 
-      render json: { address: @address }, status: :created
+      render json: @address, status: :created
     else
-      render json: { errors: @address.errors.full_messages }, status: 500
+      render json: { errors: @address.errors.full_messages }, status: :unprocessible_entity
     end
   end
 
   def update
     if @address.update(address_params)
-      render json: @address
+      render json: @address, status: :accepted
     else
-      render json: { errors: @address.errors.full_messages, status: :bad_request }
+      render json: { errors: @address.errors.full_messages }, status: ::unprocessible_entity
     end
   end
 
   def destroy
     @address.destroy
-    render json: { address: @address }, status: :ok
+    render json: @address, status: :ok
   end
 
   private

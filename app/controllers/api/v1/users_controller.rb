@@ -4,24 +4,20 @@ class Api::V1::UsersController < ApplicationController
 
   def index
     @users = User.all
-    render json: @users
+    render json: @users, status: :ok
   end
 
   def show
-    render json: @current_user
-  end
-
-  def show_user
-    render json: @current_user
+    render json: @current_user, status: :ok
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
       token = encode(user_id: @user.id)
-      render json: { token: token, status: :accepted, success: true }
+      render json: { token: token, success: true }, status: :accepted
     else
-      render json: { errors: @user.errors.full_messages, status: :unprocessible_entity }
+      render json: { errors: @user.errors.full_messages }, status: :unprocessible_entity
     end
   end
 
@@ -32,14 +28,14 @@ class Api::V1::UsersController < ApplicationController
     if @current_user.save
       render json: @current_user, status: :accepted
     else
-      render json: { errors: @current_user.errors.full_messages, status: :unprocessible_entity }
+      render json: { errors: @current_user.errors.full_messages }, status: :unprocessible_entity
     end
   end
 
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    render json: { user: @user, status: :ok }
+    render json: @user, status: :ok
   end
 
   private

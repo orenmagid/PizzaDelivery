@@ -5,11 +5,11 @@ class Api::V1::OrdersController < ApplicationController
 
   def index
     @orders = Order.all
-    render json: @orders
+    render json: @orders, status: :ok
   end
 
   def show
-    render json: @order
+    render json: @order, status: :ok
   end
 
   def create
@@ -17,7 +17,7 @@ class Api::V1::OrdersController < ApplicationController
     @order = Order.new
     order_items = params[:order][:order_items] || params[:order_items]
     if order_items.length === 0
-      render json: { errors: 'Please add items to your order.' }
+      render json: { errors: 'Please add items to your order.' }, status: :bad_request
     else
 
       order_items.each do |order_item|
@@ -30,9 +30,9 @@ class Api::V1::OrdersController < ApplicationController
         @order.user = @current_user
         @order.date_time = Time.now
         if @order.save
-          render json: @order
+          render json: @order, status: :created
         else
-          render json: { errors: @order.errors.full_messages }
+          render json: { errors: @order.errors.full_messages }, status: :unprocessible_entity
         end
       end
     end
@@ -40,15 +40,15 @@ class Api::V1::OrdersController < ApplicationController
 
   def update
     if @order.update(order_params)
-      render json: @order
+      render json: @order, status: :accepted
     else
-      render json: { errors: @order.errors.full_messages }
+      render json: { errors: @order.errors.full_messages }, status: :unprocessible_entity
     end
   end
 
   def destroy
     @order.destroy
-    render json: { order: @order, status: :ok }
+    render json: @order, status: :ok
   end
 
   private

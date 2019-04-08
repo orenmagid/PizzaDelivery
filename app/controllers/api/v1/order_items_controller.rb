@@ -7,29 +7,29 @@ class Api::V1::OrderItemsController < ApplicationController
   end
 
   def show
-    render json: @order_item
+    render json: @order_item, status: :ok
   end
 
   def create
     @order_item = OrderItem.new(order_item_params)
     if @order_item.save
-      render json: @order_item
+      render json: @order_item, status: :created
     else
-      render json: { errors: @order_item.errors.full_messages }
+      render json: { errors: @order_item.errors.full_messages }, status: :unprocessible_entity
     end
   end
 
   def update
     if @order_item.update(order_item_params)
-      render json: @order_item
+      render json: @order_item, status: :accepted
     else
-      render json: { errors: @order_item.errors.full_messages }
+      render json: { errors: @order_item.errors.full_messages }, status: :unprocessible_entity
     end
   end
 
   def destroy
     @order_item.destroy
-    render json: { order_item: @order_item, status: :ok }
+    render json: @order_item, status: :ok
   end
 
   private
