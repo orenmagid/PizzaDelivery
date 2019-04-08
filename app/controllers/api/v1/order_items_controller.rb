@@ -15,7 +15,7 @@ class Api::V1::OrderItemsController < ApplicationController
     if @order_item.save
       render json: @order_item, status: :created
     else
-      render json: { errors: @order_item.errors.full_messages }, status: :unprocessible_entity
+      render json: { errors: @order_item.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
@@ -23,7 +23,7 @@ class Api::V1::OrderItemsController < ApplicationController
     if @order_item.update(order_item_params)
       render json: @order_item, status: :accepted
     else
-      render json: { errors: @order_item.errors.full_messages }, status: :unprocessible_entity
+      render json: { errors: @order_item.errors.full_messages }, status: :unprocessable_entity
     end
   end
 

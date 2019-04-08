@@ -18,7 +18,7 @@ class Api::V1::AddressesController < ApplicationController
 
       render json: @address, status: :created
     else
-      render json: { errors: @address.errors.full_messages }, status: :unprocessible_entity
+      render json: { errors: @address.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
@@ -26,7 +26,7 @@ class Api::V1::AddressesController < ApplicationController
     if @address.update(address_params)
       render json: @address, status: :accepted
     else
-      render json: { errors: @address.errors.full_messages }, status: :unprocessible_entity
+      render json: { errors: @address.errors.full_messages }, status: :unprocessable_entity
     end
   end
 

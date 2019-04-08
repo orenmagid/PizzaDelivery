@@ -17,7 +17,7 @@ class Api::V1::UsersController < ApplicationController
       token = encode(user_id: @user.id)
       render json: { token: token, success: true }, status: :accepted
     else
-      render json: { errors: @user.errors.full_messages }, status: :unprocessible_entity
+      render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
@@ -28,7 +28,7 @@ class Api::V1::UsersController < ApplicationController
     if @current_user.save
       render json: @current_user, status: :accepted
     else
-      render json: { errors: @current_user.errors.full_messages }, status: :unprocessible_entity
+      render json: { errors: @current_user.errors.full_messages }, status: :unprocessable_entity
     end
   end
 

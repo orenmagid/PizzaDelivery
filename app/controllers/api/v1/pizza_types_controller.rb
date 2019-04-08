@@ -15,7 +15,7 @@ class Api::V1::PizzaTypesController < ApplicationController
     if @pizza_type.save
       render json: @pizza_type, status: :created
     else
-      render json: { errors: @pizza_type.errors.full_messages }, status: :unprocessible_entity
+      render json: { errors: @pizza_type.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
@@ -23,7 +23,7 @@ class Api::V1::PizzaTypesController < ApplicationController
     if @pizza_type.update(pizza_type_params)
       render json: @pizza_type, status: :accepted
     else
-      render json: { errors: @pizza_type.errors.full_messages }, status: :unprocessible_entity
+      render json: { errors: @pizza_type.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
