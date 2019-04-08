@@ -1,0 +1,3653 @@
+{
+	"info": {
+		"_postman_id": "b5bcb29d-7a1e-423a-abff-ce1139a414d7",
+		"name": "ChroniclePizza V1",
+		"description": "API for pizza delivery app.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/orders",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/orders",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Apr 2019 23:32:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"c302f7ffd40706f864df18bf4aabccc1\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "419f02ca-f0e4-4f28-8fea-18be9a0d46be"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.090408"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"user_id\": 2,\n        \"date_time\": \"2019-04-07 22:41:28 +0000\",\n        \"order_items\": [\n            {\n                \"id\": 1,\n                \"pizza_type_id\": 3,\n                \"quantity\": 1\n            }\n        ],\n        \"address_id\": \"2\",\n        \"tax\": \"0.6\",\n        \"total\": \"10.6\",\n        \"discount\": null,\n        \"user\": {\n            \"id\": 2,\n            \"first_name\": \"Demo\",\n            \"last_name\": \"User\",\n            \"username\": \"DemoUser\",\n            \"email\": \"deomuser@demouser.com\",\n            \"addresses\": []\n        },\n        \"address\": {\n            \"id\": 2,\n            \"location\": \"2175 Virginia Ave. NW, Washington, DC 20037\",\n            \"latitude\": \"38.8964727692308\",\n            \"longitude\": \"-77.0486631538461\",\n            \"user_id\": 3\n        },\n        \"pizza_types\": [\n            {\n                \"id\": 3,\n                \"name\": \"Chronicle Special\",\n                \"price\": 10\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"user_id\": 2,\n        \"date_time\": \"2019-04-07 22:41:40 +0000\",\n        \"order_items\": [\n            {\n                \"id\": 2,\n                \"pizza_type_id\": 3,\n                \"quantity\": 1\n            }\n        ],\n        \"address_id\": \"2\",\n        \"tax\": \"0.6\",\n        \"total\": \"10.6\",\n        \"discount\": null,\n        \"user\": {\n            \"id\": 2,\n            \"first_name\": \"Demo\",\n            \"last_name\": \"User\",\n            \"username\": \"DemoUser\",\n            \"email\": \"deomuser@demouser.com\",\n            \"addresses\": []\n        },\n        \"address\": {\n            \"id\": 2,\n            \"location\": \"2175 Virginia Ave. NW, Washington, DC 20037\",\n            \"latitude\": \"38.8964727692308\",\n            \"longitude\": \"-77.0486631538461\",\n            \"user_id\": 3\n        },\n        \"pizza_types\": [\n            {\n                \"id\": 3,\n                \"name\": \"Chronicle Special\",\n                \"price\": 10\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"user_id\": 2,\n        \"date_time\": \"2019-04-07 23:26:48 +0000\",\n        \"order_items\": [\n            {\n                \"id\": 3,\n                \"pizza_type_id\": 3,\n                \"quantity\": 1\n            }\n        ],\n        \"address_id\": \"2\",\n        \"tax\": \"0.6\",\n        \"total\": \"10.6\",\n        \"discount\": null,\n        \"user\": {\n            \"id\": 2,\n            \"first_name\": \"Demo\",\n            \"last_name\": \"User\",\n            \"username\": \"DemoUser\",\n            \"email\": \"deomuser@demouser.com\",\n            \"addresses\": []\n        },\n        \"address\": {\n            \"id\": 2,\n            \"location\": \"2175 Virginia Ave. NW, Washington, DC 20037\",\n            \"latitude\": \"38.8964727692308\",\n            \"longitude\": \"-77.0486631538461\",\n            \"user_id\": 3\n        },\n        \"pizza_types\": [\n            {\n                \"id\": 3,\n                \"name\": \"Chronicle Special\",\n                \"price\": 10\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"order\": {\r\n    \"order_items\": [\r\n      {\r\n        \"pizza_type_id\": 3,\r\n        \"quantity\": 1\r\n      }\r\n    ],\r\n    \"date_time\": \"2019-04-07T15:51:53.603Z\",\r\n    \"address_id\": \"2\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/orders",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"order\": {\r\n    \"order_items\": [\r\n      {\r\n        \"pizza_type_id\": 3,\r\n        \"quantity\": 1\r\n      }\r\n    ],\r\n    \"date_time\": \"2019-04-07T15:51:53.603Z\",\r\n    \"address_id\": \"2\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/orders",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:18:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"c93a66bb8e26ff33f41a114fb4739725\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "8eb25922-2aa9-41d6-b68b-4c1ac81bf4c7"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.300974"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"user_id\": 2,\n    \"date_time\": \"2019-04-08 00:18:32 +0000\",\n    \"order_items\": [\n        {\n            \"id\": 6,\n            \"pizza_type_id\": 3,\n            \"quantity\": 1\n        }\n    ],\n    \"address_id\": \"2\",\n    \"tax\": \"0.6\",\n    \"total\": \"10.6\",\n    \"discount\": null,\n    \"user\": {\n        \"id\": 2,\n        \"first_name\": \"Demo\",\n        \"last_name\": \"User\",\n        \"username\": \"DemoUser\",\n        \"email\": \"deomuser@demouser.com\",\n        \"addresses\": [\n            {\n                \"id\": 3,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:41:00.219Z\",\n                \"updated_at\": \"2019-04-07T23:41:00.219Z\"\n            },\n            {\n                \"id\": 4,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:48:45.380Z\",\n                \"updated_at\": \"2019-04-07T23:48:45.380Z\"\n            },\n            {\n                \"id\": 5,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:52:13.163Z\",\n                \"updated_at\": \"2019-04-07T23:52:13.163Z\"\n            }\n        ]\n    },\n    \"address\": {\n        \"id\": 2,\n        \"location\": \"2175 Virginia Ave. NW, Washington, DC 20037\",\n        \"latitude\": \"38.8964727692308\",\n        \"longitude\": \"-77.0486631538461\",\n        \"user_id\": 3\n    },\n    \"pizza_types\": [\n        {\n            \"id\": 3,\n            \"name\": \"Chronicle Special\",\n            \"price\": 10\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"order\": {\r\n    \"order_id\": \"2\",\r\n    \"address_id\": \"2\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/orders/2",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "202 Accepted",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"order\": {\r\n    \"order_id\": \"2\",\r\n    \"address_id\": \"2\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/orders/2",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"2"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:19:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "15024ff8-5c42-4b43-b960-0261327092df"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.027550"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"user_id\": 2,\n    \"date_time\": \"2019-04-07 22:41:40 +0000\",\n    \"order_items\": [\n        {\n            \"id\": 2,\n            \"pizza_type_id\": 3,\n            \"quantity\": 1\n        }\n    ],\n    \"address_id\": \"2\",\n    \"tax\": \"0.6\",\n    \"total\": \"10.6\",\n    \"discount\": null,\n    \"user\": {\n        \"id\": 2,\n        \"first_name\": \"Demo\",\n        \"last_name\": \"User\",\n        \"username\": \"DemoUser\",\n        \"email\": \"deomuser@demouser.com\",\n        \"addresses\": [\n            {\n                \"id\": 3,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:41:00.219Z\",\n                \"updated_at\": \"2019-04-07T23:41:00.219Z\"\n            },\n            {\n                \"id\": 4,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:48:45.380Z\",\n                \"updated_at\": \"2019-04-07T23:48:45.380Z\"\n            },\n            {\n                \"id\": 5,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:52:13.163Z\",\n                \"updated_at\": \"2019-04-07T23:52:13.163Z\"\n            }\n        ]\n    },\n    \"address\": {\n        \"id\": 2,\n        \"location\": \"2175 Virginia Ave. NW, Washington, DC 20037\",\n        \"latitude\": \"38.8964727692308\",\n        \"longitude\": \"-77.0486631538461\",\n        \"user_id\": 3\n    },\n    \"pizza_types\": [\n        {\n            \"id\": 3,\n            \"name\": \"Chronicle Special\",\n            \"price\": 10\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/orders/6",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/orders/6",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:20:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"c93a66bb8e26ff33f41a114fb4739725\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "450d42db-1436-4273-88a3-e5c25f16e13c"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.029390"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"user_id\": 2,\n    \"date_time\": \"2019-04-08 00:18:32 +0000\",\n    \"order_items\": [\n        {\n            \"id\": 6,\n            \"pizza_type_id\": 3,\n            \"quantity\": 1\n        }\n    ],\n    \"address_id\": \"2\",\n    \"tax\": \"0.6\",\n    \"total\": \"10.6\",\n    \"discount\": null,\n    \"user\": {\n        \"id\": 2,\n        \"first_name\": \"Demo\",\n        \"last_name\": \"User\",\n        \"username\": \"DemoUser\",\n        \"email\": \"deomuser@demouser.com\",\n        \"addresses\": [\n            {\n                \"id\": 3,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:41:00.219Z\",\n                \"updated_at\": \"2019-04-07T23:41:00.219Z\"\n            },\n            {\n                \"id\": 4,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:48:45.380Z\",\n                \"updated_at\": \"2019-04-07T23:48:45.380Z\"\n            },\n            {\n                \"id\": 5,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:52:13.163Z\",\n                \"updated_at\": \"2019-04-07T23:52:13.163Z\"\n            }\n        ]\n    },\n    \"address\": {\n        \"id\": 2,\n        \"location\": \"2175 Virginia Ave. NW, Washington, DC 20037\",\n        \"latitude\": \"38.8964727692308\",\n        \"longitude\": \"-77.0486631538461\",\n        \"user_id\": 3\n    },\n    \"pizza_types\": [\n        {\n            \"id\": 3,\n            \"name\": \"Chronicle Special\",\n            \"price\": 10\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/orders/1",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/orders/1",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:21:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"accb49ab914746027eadeac24c6641e4\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "5a7af328-bbed-4f64-a703-fdf9267274ab"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.022977"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"user_id\": 2,\n    \"date_time\": \"2019-04-07 22:41:28 +0000\",\n    \"order_items\": [\n        {\n            \"id\": 1,\n            \"pizza_type_id\": 3,\n            \"quantity\": 1\n        }\n    ],\n    \"address_id\": \"2\",\n    \"tax\": \"0.6\",\n    \"total\": \"10.6\",\n    \"discount\": null,\n    \"user\": {\n        \"id\": 2,\n        \"first_name\": \"Demo\",\n        \"last_name\": \"User\",\n        \"username\": \"DemoUser\",\n        \"email\": \"deomuser@demouser.com\",\n        \"addresses\": [\n            {\n                \"id\": 3,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:41:00.219Z\",\n                \"updated_at\": \"2019-04-07T23:41:00.219Z\"\n            },\n            {\n                \"id\": 4,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:48:45.380Z\",\n                \"updated_at\": \"2019-04-07T23:48:45.380Z\"\n            },\n            {\n                \"id\": 5,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:52:13.163Z\",\n                \"updated_at\": \"2019-04-07T23:52:13.163Z\"\n            }\n        ]\n    },\n    \"address\": {\n        \"id\": 2,\n        \"location\": \"2175 Virginia Ave. NW, Washington, DC 20037\",\n        \"latitude\": \"38.8964727692308\",\n        \"longitude\": \"-77.0486631538461\",\n        \"user_id\": 3\n    },\n    \"pizza_types\": [\n        {\n            \"id\": 3,\n            \"name\": \"Chronicle Special\",\n            \"price\": 10\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"DemoUser\",\r\n  \"password\": \"demouser\"\r\n}"
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/login",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"DemoUser\",\r\n  \"password\": \"demouser\"\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/login",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:21:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"e33a676f54ade978e08ef8206a3b2129\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "2384b886-fd24-41b6-b868-42c303c3e252"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.121249"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.954yktgo75GYlrGXI__8rV5g3j7C_pfowdD96513HmE\",\n    \"success\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "addresses",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/addresses",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"addresses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/addresses",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:22:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"f837ab346f62d1fbdcf5c62eb75d359a\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "a7cb52a6-f335-4e84-9493-e97f93364ef6"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.055707"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"location\": \"1255 23rd St NW, Washington, DC 20037\",\n        \"latitude\": \"38.9063947\",\n        \"longitude\": \"-77.0497865\",\n        \"user_id\": 1,\n        \"user\": {\n            \"id\": 1,\n            \"first_name\": \"The Chronicle\",\n            \"last_name\": \"of Higher Eduction\",\n            \"username\": \"chronicle\",\n            \"email\": \"chroncile@chronicleofhighereducation.com\",\n            \"addresses\": [\n                {\n                    \"id\": 1,\n                    \"location\": \"1255 23rd St NW, Washington, DC 20037\",\n                    \"latitude\": \"38.9063947\",\n                    \"longitude\": \"-77.0497865\",\n                    \"user_id\": 1,\n                    \"created_at\": \"2019-04-07T22:25:46.086Z\",\n                    \"updated_at\": \"2019-04-07T22:25:46.086Z\"\n                }\n            ]\n        },\n        \"orders\": []\n    },\n    {\n        \"id\": 2,\n        \"location\": \"2175 Virginia Ave. NW, Washington, DC 20037\",\n        \"latitude\": \"38.8964727692308\",\n        \"longitude\": \"-77.0486631538461\",\n        \"user_id\": 3,\n        \"user\": {\n            \"id\": 3,\n            \"first_name\": \"Another\",\n            \"last_name\": \"User\",\n            \"username\": \"AnotherUser\",\n            \"email\": \"anotheruser@demouser.com\",\n            \"addresses\": [\n                {\n                    \"id\": 2,\n                    \"location\": \"2175 Virginia Ave. NW, Washington, DC 20037\",\n                    \"latitude\": \"38.8964727692308\",\n                    \"longitude\": \"-77.0486631538461\",\n                    \"user_id\": 3,\n                    \"created_at\": \"2019-04-07T22:25:50.933Z\",\n                    \"updated_at\": \"2019-04-07T22:25:50.933Z\"\n                }\n            ]\n        },\n        \"orders\": [\n            {\n                \"id\": 1,\n                \"user_id\": 2,\n                \"date_time\": \"2019-04-07 22:41:28 +0000\",\n                \"order_items\": [\n                    {\n                        \"id\": 1,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 1,\n                        \"quantity\": 1\n                    }\n                ],\n                \"address_id\": \"2\",\n                \"tax\": \"0.6\",\n                \"total\": \"10.6\",\n                \"discount\": null\n            },\n            {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"date_time\": \"2019-04-07 22:41:40 +0000\",\n                \"order_items\": [\n                    {\n                        \"id\": 2,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 2,\n                        \"quantity\": 1\n                    }\n                ],\n                \"address_id\": \"2\",\n                \"tax\": \"0.6\",\n                \"total\": \"10.6\",\n                \"discount\": null\n            },\n            {\n                \"id\": 4,\n                \"user_id\": 2,\n                \"date_time\": \"2019-04-07 23:34:27 +0000\",\n                \"order_items\": [\n                    {\n                        \"id\": 4,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 4,\n                        \"quantity\": 1\n                    }\n                ],\n                \"address_id\": \"2\",\n                \"tax\": \"0.6\",\n                \"total\": \"10.6\",\n                \"discount\": null\n            },\n            {\n                \"id\": 5,\n                \"user_id\": 2,\n                \"date_time\": \"2019-04-07 23:35:22 +0000\",\n                \"order_items\": [\n                    {\n                        \"id\": 5,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 5,\n                        \"quantity\": 1\n                    }\n                ],\n                \"address_id\": \"2\",\n                \"tax\": \"0.6\",\n                \"total\": \"10.6\",\n                \"discount\": null\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n        \"latitude\": \"38.8982180416667\",\n        \"longitude\": \"-77.0519058333333\",\n        \"user_id\": 2,\n        \"user\": {\n            \"id\": 2,\n            \"first_name\": \"Demo\",\n            \"last_name\": \"User\",\n            \"username\": \"DemoUser\",\n            \"email\": \"deomuser@demouser.com\",\n            \"addresses\": [\n                {\n                    \"id\": 3,\n                    \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                    \"latitude\": \"38.8982180416667\",\n                    \"longitude\": \"-77.0519058333333\",\n                    \"user_id\": 2,\n                    \"created_at\": \"2019-04-07T23:41:00.219Z\",\n                    \"updated_at\": \"2019-04-07T23:41:00.219Z\"\n                },\n                {\n                    \"id\": 4,\n                    \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                    \"latitude\": \"38.8982180416667\",\n                    \"longitude\": \"-77.0519058333333\",\n                    \"user_id\": 2,\n                    \"created_at\": \"2019-04-07T23:48:45.380Z\",\n                    \"updated_at\": \"2019-04-07T23:48:45.380Z\"\n                },\n                {\n                    \"id\": 5,\n                    \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                    \"latitude\": \"38.8982180416667\",\n                    \"longitude\": \"-77.0519058333333\",\n                    \"user_id\": 2,\n                    \"created_at\": \"2019-04-07T23:52:13.163Z\",\n                    \"updated_at\": \"2019-04-07T23:52:13.163Z\"\n                }\n            ]\n        },\n        \"orders\": []\n    },\n    {\n        \"id\": 4,\n        \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n        \"latitude\": \"38.8982180416667\",\n        \"longitude\": \"-77.0519058333333\",\n        \"user_id\": 2,\n        \"user\": {\n            \"id\": 2,\n            \"first_name\": \"Demo\",\n            \"last_name\": \"User\",\n            \"username\": \"DemoUser\",\n            \"email\": \"deomuser@demouser.com\",\n            \"addresses\": [\n                {\n                    \"id\": 3,\n                    \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                    \"latitude\": \"38.8982180416667\",\n                    \"longitude\": \"-77.0519058333333\",\n                    \"user_id\": 2,\n                    \"created_at\": \"2019-04-07T23:41:00.219Z\",\n                    \"updated_at\": \"2019-04-07T23:41:00.219Z\"\n                },\n                {\n                    \"id\": 4,\n                    \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                    \"latitude\": \"38.8982180416667\",\n                    \"longitude\": \"-77.0519058333333\",\n                    \"user_id\": 2,\n                    \"created_at\": \"2019-04-07T23:48:45.380Z\",\n                    \"updated_at\": \"2019-04-07T23:48:45.380Z\"\n                },\n                {\n                    \"id\": 5,\n                    \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                    \"latitude\": \"38.8982180416667\",\n                    \"longitude\": \"-77.0519058333333\",\n                    \"user_id\": 2,\n                    \"created_at\": \"2019-04-07T23:52:13.163Z\",\n                    \"updated_at\": \"2019-04-07T23:52:13.163Z\"\n                }\n            ]\n        },\n        \"orders\": []\n    },\n    {\n        \"id\": 5,\n        \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n        \"latitude\": \"38.8982180416667\",\n        \"longitude\": \"-77.0519058333333\",\n        \"user_id\": 2,\n        \"user\": {\n            \"id\": 2,\n            \"first_name\": \"Demo\",\n            \"last_name\": \"User\",\n            \"username\": \"DemoUser\",\n            \"email\": \"deomuser@demouser.com\",\n            \"addresses\": [\n                {\n                    \"id\": 3,\n                    \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                    \"latitude\": \"38.8982180416667\",\n                    \"longitude\": \"-77.0519058333333\",\n                    \"user_id\": 2,\n                    \"created_at\": \"2019-04-07T23:41:00.219Z\",\n                    \"updated_at\": \"2019-04-07T23:41:00.219Z\"\n                },\n                {\n                    \"id\": 4,\n                    \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                    \"latitude\": \"38.8982180416667\",\n                    \"longitude\": \"-77.0519058333333\",\n                    \"user_id\": 2,\n                    \"created_at\": \"2019-04-07T23:48:45.380Z\",\n                    \"updated_at\": \"2019-04-07T23:48:45.380Z\"\n                },\n                {\n                    \"id\": 5,\n                    \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                    \"latitude\": \"38.8982180416667\",\n                    \"longitude\": \"-77.0519058333333\",\n                    \"user_id\": 2,\n                    \"created_at\": \"2019-04-07T23:52:13.163Z\",\n                    \"updated_at\": \"2019-04-07T23:52:13.163Z\"\n                }\n            ]\n        },\n        \"orders\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"address\": {\r\n    \"location\": \"The American University in Cairo\",\r\n    \"user_id\": 1\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/addresses",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"addresses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "422 Unprocessable Entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"address\": {\r\n    \"location\": \"The American University in Cairo\",\r\n    \"user_id\": 1\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/addresses",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:44:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "0b991700-675c-46d4-9f6f-e873d8b43863"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.844041"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": [\n        \"You are 5809.644952823622 miles from the Chronicle. We are located at 1255 23rd St NW # 700, Washington, DC 20037. Let us know when you are a bit closer, and we would be happy to deliver.\"\n    ]\n}"
+						},
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"address\": {\r\n    \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\r\n    \"user_id\": 1\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/addresses",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:22:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"4e3a4eba1d24935d2fb3e9b52d4f10dd\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "299633ce-a7ed-460f-9107-e81fc2136b0c"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.838915"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n    \"latitude\": \"38.8982180416667\",\n    \"longitude\": \"-77.0519058333333\",\n    \"user_id\": 2,\n    \"user\": {\n        \"id\": 2,\n        \"first_name\": \"Demo\",\n        \"last_name\": \"User\",\n        \"username\": \"DemoUser\",\n        \"email\": \"deomuser@demouser.com\",\n        \"addresses\": [\n            {\n                \"id\": 3,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:41:00.219Z\",\n                \"updated_at\": \"2019-04-07T23:41:00.219Z\"\n            },\n            {\n                \"id\": 4,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:48:45.380Z\",\n                \"updated_at\": \"2019-04-07T23:48:45.380Z\"\n            },\n            {\n                \"id\": 5,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:52:13.163Z\",\n                \"updated_at\": \"2019-04-07T23:52:13.163Z\"\n            },\n            {\n                \"id\": 6,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-08T00:22:29.833Z\",\n                \"updated_at\": \"2019-04-08T00:22:29.833Z\"\n            }\n        ]\n    },\n    \"orders\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"address\": {\r\n    \"address_id\": \"4\",\r\n    \"location\": \"1256 23rd St NW, Washington, DC 20037\",\r\n    \"user_id\": 1\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/addresses/4",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"addresses",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "202 Accepted",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"address\": {\r\n    \"address_id\": \"4\",\r\n    \"location\": \"1256 23rd St NW, Washington, DC 20037\",\r\n    \"user_id\": 1\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/addresses/4",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses",
+										"4"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:24:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "4f831088-e8d5-4506-83d0-daf09ab81ce1"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.855018"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"location\": \"1256 23rd St NW, Washington, DC 20037\",\n    \"latitude\": \"38.9063789954351\",\n    \"longitude\": \"-77.0502088393191\",\n    \"user_id\": 1,\n    \"user\": {\n        \"id\": 1,\n        \"first_name\": \"The Chronicle\",\n        \"last_name\": \"of Higher Eduction\",\n        \"username\": \"chronicle\",\n        \"email\": \"chroncile@chronicleofhighereducation.com\",\n        \"addresses\": [\n            {\n                \"id\": 1,\n                \"location\": \"1255 23rd St NW, Washington, DC 20037\",\n                \"latitude\": \"38.9063947\",\n                \"longitude\": \"-77.0497865\",\n                \"user_id\": 1,\n                \"created_at\": \"2019-04-07T22:25:46.086Z\",\n                \"updated_at\": \"2019-04-07T22:25:46.086Z\"\n            },\n            {\n                \"id\": 4,\n                \"location\": \"1256 23rd St NW, Washington, DC 20037\",\n                \"latitude\": \"38.9063789954351\",\n                \"longitude\": \"-77.0502088393191\",\n                \"user_id\": 1,\n                \"created_at\": \"2019-04-07T23:48:45.380Z\",\n                \"updated_at\": \"2019-04-08T00:24:18.050Z\"\n            }\n        ]\n    },\n    \"orders\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/addresses/3",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"addresses",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/addresses/3",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:24:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"7edd0d992dd87466caf2d91177a3509f\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "67d4a1dd-2d20-4809-881a-52aebb8d4e21"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.020504"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n    \"latitude\": \"38.8982180416667\",\n    \"longitude\": \"-77.0519058333333\",\n    \"user_id\": 2,\n    \"user\": {\n        \"id\": 2,\n        \"first_name\": \"Demo\",\n        \"last_name\": \"User\",\n        \"username\": \"DemoUser\",\n        \"email\": \"deomuser@demouser.com\",\n        \"addresses\": [\n            {\n                \"id\": 5,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-07T23:52:13.163Z\",\n                \"updated_at\": \"2019-04-07T23:52:13.163Z\"\n            },\n            {\n                \"id\": 6,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2,\n                \"created_at\": \"2019-04-08T00:22:29.833Z\",\n                \"updated_at\": \"2019-04-08T00:22:29.833Z\"\n            }\n        ]\n    },\n    \"orders\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/addresses/1",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"addresses",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/addresses/1",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:24:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"66149cccbbbdc422ac81736ad1c43622\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "8d6a7092-392e-448e-8d21-da8be5968e79"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.017345"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"location\": \"1255 23rd St NW, Washington, DC 20037\",\n    \"latitude\": \"38.9063947\",\n    \"longitude\": \"-77.0497865\",\n    \"user_id\": 1,\n    \"user\": {\n        \"id\": 1,\n        \"first_name\": \"The Chronicle\",\n        \"last_name\": \"of Higher Eduction\",\n        \"username\": \"chronicle\",\n        \"email\": \"chroncile@chronicleofhighereducation.com\",\n        \"addresses\": [\n            {\n                \"id\": 1,\n                \"location\": \"1255 23rd St NW, Washington, DC 20037\",\n                \"latitude\": \"38.9063947\",\n                \"longitude\": \"-77.0497865\",\n                \"user_id\": 1,\n                \"created_at\": \"2019-04-07T22:25:46.086Z\",\n                \"updated_at\": \"2019-04-07T22:25:46.086Z\"\n            },\n            {\n                \"id\": 4,\n                \"location\": \"1256 23rd St NW, Washington, DC 20037\",\n                \"latitude\": \"38.9063789954351\",\n                \"longitude\": \"-77.0502088393191\",\n                \"user_id\": 1,\n                \"created_at\": \"2019-04-07T23:48:45.380Z\",\n                \"updated_at\": \"2019-04-08T00:24:18.050Z\"\n            }\n        ]\n    },\n    \"orders\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "order_items",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/order_items",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"order_items"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/order_items",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"order_items"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:25:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"d4ece81c3968e8a426c23ce993d4b24a\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "fa42c5fa-0218-4b38-8ffc-3a198026bdc5"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.040385"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"pizza_type_id\": 3,\n        \"quantity\": 1,\n        \"order\": {\n            \"id\": 1,\n            \"user_id\": 2,\n            \"date_time\": \"2019-04-07 22:41:28 +0000\",\n            \"order_items\": [\n                {\n                    \"id\": 1,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 1,\n                    \"quantity\": 1\n                }\n            ],\n            \"address_id\": \"2\",\n            \"tax\": \"0.6\",\n            \"total\": \"10.6\",\n            \"discount\": null\n        },\n        \"pizza_type\": {\n            \"id\": 3,\n            \"name\": \"Chronicle Special\",\n            \"price\": 10\n        }\n    },\n    {\n        \"id\": 2,\n        \"pizza_type_id\": 3,\n        \"quantity\": 1,\n        \"order\": {\n            \"id\": 2,\n            \"user_id\": 2,\n            \"date_time\": \"2019-04-07 22:41:40 +0000\",\n            \"order_items\": [\n                {\n                    \"id\": 2,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 2,\n                    \"quantity\": 1\n                }\n            ],\n            \"address_id\": \"2\",\n            \"tax\": \"0.6\",\n            \"total\": \"10.6\",\n            \"discount\": null\n        },\n        \"pizza_type\": {\n            \"id\": 3,\n            \"name\": \"Chronicle Special\",\n            \"price\": 10\n        }\n    },\n    {\n        \"id\": 3,\n        \"pizza_type_id\": 3,\n        \"quantity\": 1,\n        \"order\": null,\n        \"pizza_type\": {\n            \"id\": 3,\n            \"name\": \"Chronicle Special\",\n            \"price\": 10\n        }\n    },\n    {\n        \"id\": 4,\n        \"pizza_type_id\": 3,\n        \"quantity\": 1,\n        \"order\": {\n            \"id\": 4,\n            \"user_id\": 2,\n            \"date_time\": \"2019-04-07 23:34:27 +0000\",\n            \"order_items\": [\n                {\n                    \"id\": 4,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 4,\n                    \"quantity\": 1\n                }\n            ],\n            \"address_id\": \"2\",\n            \"tax\": \"0.6\",\n            \"total\": \"10.6\",\n            \"discount\": null\n        },\n        \"pizza_type\": {\n            \"id\": 3,\n            \"name\": \"Chronicle Special\",\n            \"price\": 10\n        }\n    },\n    {\n        \"id\": 5,\n        \"pizza_type_id\": 3,\n        \"quantity\": 1,\n        \"order\": {\n            \"id\": 5,\n            \"user_id\": 2,\n            \"date_time\": \"2019-04-07 23:35:22 +0000\",\n            \"order_items\": [\n                {\n                    \"id\": 5,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 5,\n                    \"quantity\": 1\n                }\n            ],\n            \"address_id\": \"2\",\n            \"tax\": \"0.6\",\n            \"total\": \"10.6\",\n            \"discount\": null\n        },\n        \"pizza_type\": {\n            \"id\": 3,\n            \"name\": \"Chronicle Special\",\n            \"price\": 10\n        }\n    },\n    {\n        \"id\": 6,\n        \"pizza_type_id\": 3,\n        \"quantity\": 1,\n        \"order\": null,\n        \"pizza_type\": {\n            \"id\": 3,\n            \"name\": \"Chronicle Special\",\n            \"price\": 10\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"order_item\": {\r\n    \"quantity\": \"0\",\r\n    \"pizza_type_id\": 1\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/order_items",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"order_items"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "422 Unprocessable Entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"order_item\": {\r\n    \"quantity\": \"0\",\r\n    \"pizza_type_id\": 1\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/order_items",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"order_items"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:46:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "836ca843-b98d-486d-9d64-58854d9417f8"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.021212"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": [\n        \"Quantity must be greater than zero\"\n    ]\n}"
+						},
+						{
+							"name": "422 Unprocessable Entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"order_item\": {\r\n    \"quantity\": \"25\",\r\n    \"pizza_type_id\": 1\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/order_items",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"order_items"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:46:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "fa216d25-8b56-48d3-80b8-4c254f829542"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.010925"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": [\n        \"Quantity must be less than twenty\"\n    ]\n}"
+						},
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"order_item\": {\r\n    \"pizza_type_id\": 3,\r\n    \"quantity\": 1,\r\n    \"order_id\": \"1\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/order_items",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"order_items"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:25:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"8018ec8b1b3dba4a87424db539afe40e\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "42ebb471-234a-4840-ae02-b20a061e9194"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.016999"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 8,\n    \"pizza_type_id\": 3,\n    \"quantity\": 1,\n    \"order\": {\n        \"id\": 1,\n        \"user_id\": 2,\n        \"date_time\": \"2019-04-07 22:41:28 +0000\",\n        \"order_items\": [\n            {\n                \"id\": 1,\n                \"pizza_type_id\": 3,\n                \"order_id\": 1,\n                \"quantity\": 1\n            },\n            {\n                \"id\": 7,\n                \"pizza_type_id\": 3,\n                \"order_id\": 1,\n                \"quantity\": 1\n            },\n            {\n                \"id\": 8,\n                \"pizza_type_id\": 3,\n                \"order_id\": 1,\n                \"quantity\": 1\n            }\n        ],\n        \"address_id\": \"2\",\n        \"tax\": \"0.6\",\n        \"total\": \"10.6\",\n        \"discount\": null\n    },\n    \"pizza_type\": {\n        \"id\": 3,\n        \"name\": \"Chronicle Special\",\n        \"price\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"order_item\": {\r\n    \"id\": \"2\",\r\n    \"pizza_type_id\": 3,\r\n    \"quantity\": 4\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/order_items/4",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"order_items",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "202 Accepted",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"order_item\": {\r\n    \"id\": \"2\",\r\n    \"pizza_type_id\": 3,\r\n    \"quantity\": 4\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/order_items/4",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"order_items",
+										"4"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:26:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "b8ddd743-72b9-405d-9512-cb081c38c8cd"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.031437"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"pizza_type_id\": 3,\n    \"quantity\": 4,\n    \"order\": {\n        \"id\": 4,\n        \"user_id\": 2,\n        \"date_time\": \"2019-04-07 23:34:27 +0000\",\n        \"order_items\": [\n            {\n                \"id\": 4,\n                \"pizza_type_id\": 3,\n                \"order_id\": 4,\n                \"quantity\": 4\n            }\n        ],\n        \"address_id\": \"2\",\n        \"tax\": \"0.6\",\n        \"total\": \"10.6\",\n        \"discount\": null\n    },\n    \"pizza_type\": {\n        \"id\": 3,\n        \"name\": \"Chronicle Special\",\n        \"price\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/order_items/2",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"order_items",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/order_items/2",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"order_items",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:27:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"c9ae7873081536b9840f71228d746e20\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "924c3868-3d61-409d-acce-89df07f29029"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.025403"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"pizza_type_id\": 3,\n    \"quantity\": 1,\n    \"order\": {\n        \"id\": 2,\n        \"user_id\": 2,\n        \"date_time\": \"2019-04-07 22:41:40 +0000\",\n        \"order_items\": [],\n        \"address_id\": \"2\",\n        \"tax\": \"0.6\",\n        \"total\": \"10.6\",\n        \"discount\": null\n    },\n    \"pizza_type\": {\n        \"id\": 3,\n        \"name\": \"Chronicle Special\",\n        \"price\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/addresses/2",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"addresses",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/addresses/2",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:27:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"5b63aee281ad4a0d94d00702b2b580bf\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "d69ba6dd-2146-4200-964d-7283d72f7a68"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.028987"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"location\": \"2175 Virginia Ave. NW, Washington, DC 20037\",\n    \"latitude\": \"38.8964727692308\",\n    \"longitude\": \"-77.0486631538461\",\n    \"user_id\": 3,\n    \"user\": {\n        \"id\": 3,\n        \"first_name\": \"Another\",\n        \"last_name\": \"User\",\n        \"username\": \"AnotherUser\",\n        \"email\": \"anotheruser@demouser.com\",\n        \"addresses\": [\n            {\n                \"id\": 2,\n                \"location\": \"2175 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8964727692308\",\n                \"longitude\": \"-77.0486631538461\",\n                \"user_id\": 3,\n                \"created_at\": \"2019-04-07T22:25:50.933Z\",\n                \"updated_at\": \"2019-04-07T22:25:50.933Z\"\n            }\n        ]\n    },\n    \"orders\": [\n        {\n            \"id\": 1,\n            \"user_id\": 2,\n            \"date_time\": \"2019-04-07 22:41:28 +0000\",\n            \"order_items\": [\n                {\n                    \"id\": 1,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 1,\n                    \"quantity\": 1\n                },\n                {\n                    \"id\": 7,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 1,\n                    \"quantity\": 1\n                },\n                {\n                    \"id\": 8,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 1,\n                    \"quantity\": 1\n                }\n            ],\n            \"address_id\": \"2\",\n            \"tax\": \"0.6\",\n            \"total\": \"10.6\",\n            \"discount\": null\n        },\n        {\n            \"id\": 2,\n            \"user_id\": 2,\n            \"date_time\": \"2019-04-07 22:41:40 +0000\",\n            \"order_items\": [],\n            \"address_id\": \"2\",\n            \"tax\": \"0.6\",\n            \"total\": \"10.6\",\n            \"discount\": null\n        },\n        {\n            \"id\": 4,\n            \"user_id\": 2,\n            \"date_time\": \"2019-04-07 23:34:27 +0000\",\n            \"order_items\": [\n                {\n                    \"id\": 4,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 4,\n                    \"quantity\": 4\n                }\n            ],\n            \"address_id\": \"2\",\n            \"tax\": \"0.6\",\n            \"total\": \"10.6\",\n            \"discount\": null\n        },\n        {\n            \"id\": 5,\n            \"user_id\": 2,\n            \"date_time\": \"2019-04-07 23:35:22 +0000\",\n            \"order_items\": [\n                {\n                    \"id\": 5,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 5,\n                    \"quantity\": 1\n                }\n            ],\n            \"address_id\": \"2\",\n            \"tax\": \"0.6\",\n            \"total\": \"10.6\",\n            \"discount\": null\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/users",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:28:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"99d74ba021ada6b8c8e2c8984790880c\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "ecc52cdd-f6af-44e0-b938-eb5e8618dcbf"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.035146"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"first_name\": \"The Chronicle\",\n        \"last_name\": \"of Higher Eduction\",\n        \"username\": \"chronicle\",\n        \"email\": \"chroncile@chronicleofhighereducation.com\",\n        \"addresses\": [\n            {\n                \"id\": 1,\n                \"location\": \"1255 23rd St NW, Washington, DC 20037\",\n                \"latitude\": \"38.9063947\",\n                \"longitude\": \"-77.0497865\",\n                \"user_id\": 1\n            },\n            {\n                \"id\": 4,\n                \"location\": \"1256 23rd St NW, Washington, DC 20037\",\n                \"latitude\": \"38.9063789954351\",\n                \"longitude\": \"-77.0502088393191\",\n                \"user_id\": 1\n            }\n        ],\n        \"orders\": []\n    },\n    {\n        \"id\": 2,\n        \"first_name\": \"Demo\",\n        \"last_name\": \"User\",\n        \"username\": \"DemoUser\",\n        \"email\": \"deomuser@demouser.com\",\n        \"addresses\": [\n            {\n                \"id\": 5,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2\n            },\n            {\n                \"id\": 6,\n                \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8982180416667\",\n                \"longitude\": \"-77.0519058333333\",\n                \"user_id\": 2\n            }\n        ],\n        \"orders\": [\n            {\n                \"id\": 1,\n                \"user_id\": 2,\n                \"date_time\": \"2019-04-07 22:41:28 +0000\",\n                \"order_items\": [\n                    {\n                        \"id\": 1,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 1,\n                        \"quantity\": 1\n                    },\n                    {\n                        \"id\": 7,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 1,\n                        \"quantity\": 1\n                    },\n                    {\n                        \"id\": 8,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 1,\n                        \"quantity\": 1\n                    }\n                ],\n                \"address_id\": \"2\",\n                \"tax\": \"0.6\",\n                \"total\": \"10.6\",\n                \"discount\": null\n            },\n            {\n                \"id\": 2,\n                \"user_id\": 2,\n                \"date_time\": \"2019-04-07 22:41:40 +0000\",\n                \"order_items\": [],\n                \"address_id\": \"2\",\n                \"tax\": \"0.6\",\n                \"total\": \"10.6\",\n                \"discount\": null\n            },\n            {\n                \"id\": 4,\n                \"user_id\": 2,\n                \"date_time\": \"2019-04-07 23:34:27 +0000\",\n                \"order_items\": [\n                    {\n                        \"id\": 4,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 4,\n                        \"quantity\": 4\n                    }\n                ],\n                \"address_id\": \"2\",\n                \"tax\": \"0.6\",\n                \"total\": \"10.6\",\n                \"discount\": null\n            },\n            {\n                \"id\": 5,\n                \"user_id\": 2,\n                \"date_time\": \"2019-04-07 23:35:22 +0000\",\n                \"order_items\": [\n                    {\n                        \"id\": 5,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 5,\n                        \"quantity\": 1\n                    }\n                ],\n                \"address_id\": \"2\",\n                \"tax\": \"0.6\",\n                \"total\": \"10.6\",\n                \"discount\": null\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"first_name\": \"Another\",\n        \"last_name\": \"User\",\n        \"username\": \"AnotherUser\",\n        \"email\": \"anotheruser@demouser.com\",\n        \"addresses\": [\n            {\n                \"id\": 2,\n                \"location\": \"2175 Virginia Ave. NW, Washington, DC 20037\",\n                \"latitude\": \"38.8964727692308\",\n                \"longitude\": \"-77.0486631538461\",\n                \"user_id\": 3\n            }\n        ],\n        \"orders\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user\": {\r\n    \"first_name\": \"Test\",\r\n    \"last_name\": \"User\",\r\n    \"username\": \"testuser\",\r\n    \"email\": \"testuser@tests.com\",\r\n    \"password\": \"testuser\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "202 Accepted",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user\": {\r\n    \"first_name\": \"Dude\",\r\n    \"last_name\": \"UserMan\",\r\n    \"username\": \"dudeserman\",\r\n    \"email\": \"dudeuserman@tests.com\",\r\n    \"password\": \"testuser\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/users",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:31:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "60593448-2844-4e47-aa1a-a2435ca76895"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.102301"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1fQ.YfXHUmWLY0K0vp8sM5gqDuruDBgr5WM05mucb-gBc-k\",\n    \"success\": true\n}"
+						},
+						{
+							"name": "422 Unprocessable Entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user\": {\r\n    \"first_name\": \"Test\",\r\n    \"last_name\": \"User\",\r\n    \"username\": \"testuser\",\r\n    \"email\": \"testuser@tests.com\",\r\n    \"password\": \"testuser\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/users",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:48:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "8e65da3f-5254-4184-be2e-87d6e6667ce2"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.090029"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": [\n        \"Username has already been taken\",\n        \"Email has already been taken\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user\": {\r\n    \"user_id\": \"2\",\r\n    \"first_name\": \"DemoKing\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/users/2",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "202 Accepted",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user\": {\r\n    \"user_id\": \"2\",\r\n    \"first_name\": \"DemoKing\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/users/2",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"2"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:33:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "71c6ca3b-68c3-43f4-b015-2ff1cb0f15af"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.055996"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"first_name\": \"DemoKing\",\n    \"last_name\": \"User\",\n    \"username\": \"DemoUser\",\n    \"email\": \"deomuser@demouser.com\",\n    \"addresses\": [\n        {\n            \"id\": 5,\n            \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n            \"latitude\": \"38.8982180416667\",\n            \"longitude\": \"-77.0519058333333\",\n            \"user_id\": 2\n        },\n        {\n            \"id\": 6,\n            \"location\": \"2470 Virginia Ave. NW, Washington, DC 20037\",\n            \"latitude\": \"38.8982180416667\",\n            \"longitude\": \"-77.0519058333333\",\n            \"user_id\": 2\n        }\n    ],\n    \"orders\": [\n        {\n            \"id\": 1,\n            \"user_id\": 2,\n            \"date_time\": \"2019-04-07 22:41:28 +0000\",\n            \"order_items\": [\n                {\n                    \"id\": 1,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 1,\n                    \"quantity\": 1\n                },\n                {\n                    \"id\": 7,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 1,\n                    \"quantity\": 1\n                },\n                {\n                    \"id\": 8,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 1,\n                    \"quantity\": 1\n                }\n            ],\n            \"address_id\": \"2\",\n            \"tax\": \"0.6\",\n            \"total\": \"10.6\",\n            \"discount\": null\n        },\n        {\n            \"id\": 2,\n            \"user_id\": 2,\n            \"date_time\": \"2019-04-07 22:41:40 +0000\",\n            \"order_items\": [],\n            \"address_id\": \"2\",\n            \"tax\": \"0.6\",\n            \"total\": \"10.6\",\n            \"discount\": null\n        },\n        {\n            \"id\": 4,\n            \"user_id\": 2,\n            \"date_time\": \"2019-04-07 23:34:27 +0000\",\n            \"order_items\": [\n                {\n                    \"id\": 4,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 4,\n                    \"quantity\": 4\n                }\n            ],\n            \"address_id\": \"2\",\n            \"tax\": \"0.6\",\n            \"total\": \"10.6\",\n            \"discount\": null\n        },\n        {\n            \"id\": 5,\n            \"user_id\": 2,\n            \"date_time\": \"2019-04-07 23:35:22 +0000\",\n            \"order_items\": [\n                {\n                    \"id\": 5,\n                    \"pizza_type_id\": 3,\n                    \"order_id\": 5,\n                    \"quantity\": 1\n                }\n            ],\n            \"address_id\": \"2\",\n            \"tax\": \"0.6\",\n            \"total\": \"10.6\",\n            \"discount\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/users/3",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/users/3",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:33:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"f6c8175b578260b9c31e4f7b271e9ad5\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "9402d837-aa17-4346-bf12-042eb07c0da2"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.021917"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"first_name\": \"Another\",\n    \"last_name\": \"User\",\n    \"username\": \"AnotherUser\",\n    \"email\": \"anotheruser@demouser.com\",\n    \"addresses\": [\n        {\n            \"id\": 2,\n            \"location\": \"2175 Virginia Ave. NW, Washington, DC 20037\",\n            \"latitude\": \"38.8964727692308\",\n            \"longitude\": \"-77.0486631538461\",\n            \"user_id\": 3\n        }\n    ],\n    \"orders\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/users/1",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/users/1",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:33:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"3366f5a5e12aa395cd7df25f964a7e80\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "673a614d-b7c6-4756-86a7-9e5a80933af4"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.015747"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"first_name\": \"The Chronicle\",\n    \"last_name\": \"of Higher Eduction\",\n    \"username\": \"chronicle\",\n    \"email\": \"chroncile@chronicleofhighereducation.com\",\n    \"addresses\": [\n        {\n            \"id\": 1,\n            \"location\": \"1255 23rd St NW, Washington, DC 20037\",\n            \"latitude\": \"38.9063947\",\n            \"longitude\": \"-77.0497865\",\n            \"user_id\": 1\n        },\n        {\n            \"id\": 4,\n            \"location\": \"1256 23rd St NW, Washington, DC 20037\",\n            \"latitude\": \"38.9063789954351\",\n            \"longitude\": \"-77.0502088393191\",\n            \"user_id\": 1\n        }\n    ],\n    \"orders\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "pizza_types",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/pizza_types",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pizza_types"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/pizza_types",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"pizza_types"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:34:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"7ed12353e47c6b2a18b3a8e0704c8db2\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "0caf0348-a72d-4bb1-8620-ecba61eaeb98"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.068711"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Margherita\",\n        \"price\": 8,\n        \"order_items\": [],\n        \"orders\": []\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Pepperoni\",\n        \"price\": 9,\n        \"order_items\": [],\n        \"orders\": []\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Chronicle Special\",\n        \"price\": 10,\n        \"order_items\": [\n            {\n                \"id\": 1,\n                \"pizza_type_id\": 3,\n                \"quantity\": 1\n            },\n            {\n                \"id\": 3,\n                \"pizza_type_id\": 3,\n                \"quantity\": 1\n            },\n            {\n                \"id\": 5,\n                \"pizza_type_id\": 3,\n                \"quantity\": 1\n            },\n            {\n                \"id\": 6,\n                \"pizza_type_id\": 3,\n                \"quantity\": 1\n            },\n            {\n                \"id\": 7,\n                \"pizza_type_id\": 3,\n                \"quantity\": 1\n            },\n            {\n                \"id\": 8,\n                \"pizza_type_id\": 3,\n                \"quantity\": 1\n            },\n            {\n                \"id\": 4,\n                \"pizza_type_id\": 3,\n                \"quantity\": 4\n            }\n        ],\n        \"orders\": [\n            {\n                \"id\": 1,\n                \"user_id\": 2,\n                \"date_time\": \"2019-04-07 22:41:28 +0000\",\n                \"order_items\": [\n                    {\n                        \"id\": 1,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 1,\n                        \"quantity\": 1\n                    },\n                    {\n                        \"id\": 7,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 1,\n                        \"quantity\": 1\n                    },\n                    {\n                        \"id\": 8,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 1,\n                        \"quantity\": 1\n                    }\n                ],\n                \"address_id\": \"2\",\n                \"tax\": \"0.6\",\n                \"total\": \"10.6\",\n                \"discount\": null\n            },\n            {\n                \"id\": 1,\n                \"user_id\": 2,\n                \"date_time\": \"2019-04-07 22:41:28 +0000\",\n                \"order_items\": [\n                    {\n                        \"id\": 1,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 1,\n                        \"quantity\": 1\n                    },\n                    {\n                        \"id\": 7,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 1,\n                        \"quantity\": 1\n                    },\n                    {\n                        \"id\": 8,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 1,\n                        \"quantity\": 1\n                    }\n                ],\n                \"address_id\": \"2\",\n                \"tax\": \"0.6\",\n                \"total\": \"10.6\",\n                \"discount\": null\n            },\n            {\n                \"id\": 1,\n                \"user_id\": 2,\n                \"date_time\": \"2019-04-07 22:41:28 +0000\",\n                \"order_items\": [\n                    {\n                        \"id\": 1,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 1,\n                        \"quantity\": 1\n                    },\n                    {\n                        \"id\": 7,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 1,\n                        \"quantity\": 1\n                    },\n                    {\n                        \"id\": 8,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 1,\n                        \"quantity\": 1\n                    }\n                ],\n                \"address_id\": \"2\",\n                \"tax\": \"0.6\",\n                \"total\": \"10.6\",\n                \"discount\": null\n            },\n            {\n                \"id\": 4,\n                \"user_id\": 2,\n                \"date_time\": \"2019-04-07 23:34:27 +0000\",\n                \"order_items\": [\n                    {\n                        \"id\": 4,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 4,\n                        \"quantity\": 4\n                    }\n                ],\n                \"address_id\": \"2\",\n                \"tax\": \"0.6\",\n                \"total\": \"10.6\",\n                \"discount\": null\n            },\n            {\n                \"id\": 5,\n                \"user_id\": 2,\n                \"date_time\": \"2019-04-07 23:35:22 +0000\",\n                \"order_items\": [\n                    {\n                        \"id\": 5,\n                        \"pizza_type_id\": 3,\n                        \"order_id\": 5,\n                        \"quantity\": 1\n                    }\n                ],\n                \"address_id\": \"2\",\n                \"tax\": \"0.6\",\n                \"total\": \"10.6\",\n                \"discount\": null\n            }\n        ]\n    },\n    {\n        \"id\": 4,\n        \"name\": \"The Daily\",\n        \"price\": 11,\n        \"order_items\": [],\n        \"orders\": []\n    },\n    {\n        \"id\": 5,\n        \"name\": \"The Daily\",\n        \"price\": 11,\n        \"order_items\": [],\n        \"orders\": []\n    },\n    {\n        \"id\": 6,\n        \"name\": \"The Daily\",\n        \"price\": 11,\n        \"order_items\": [],\n        \"orders\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"pizza_type\": {\r\n    \"name\": \"The Daily\",\r\n    \"price\": \"22\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/pizza_types",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pizza_types"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "500 Internal Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"pizza_type\": {\r\n    \"name\": \"The Daily\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/pizza_types",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"pizza_types"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:35:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "6a20ec8a-371a-4fa6-ae6d-88b770ab0172"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.011752"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "422 Unprocessable Entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"pizza_type\": {\r\n    \"name\": \"The Daily\",\r\n    \"price\": \"0\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/pizza_types",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"pizza_types"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:36:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "015b5dbe-e1e1-4c34-8279-4cbea6791efb"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.009892"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": [\n        \"Price must be greater than zero\"\n    ]\n}"
+						},
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"pizza_type\": {\r\n    \"name\": \"The Daily\",\r\n    \"price\": \"11\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/pizza_types",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"pizza_types"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:34:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"2bf4e53cd8139eec10794ad9eda1bcc2\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "cb0d69ba-1fd4-4cdb-95c2-96c76b9eea41"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.013691"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"name\": \"The Daily\",\n    \"price\": 11,\n    \"order_items\": [],\n    \"orders\": []\n}"
+						},
+						{
+							"name": "422 Unprocessable Entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"pizza_type\": {\r\n    \"name\": \"The Daily\",\r\n    \"price\": \"22\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/pizza_types",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"pizza_types"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:37:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "13f3b87a-d7d2-4ef6-80fc-faedc1678af2"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.012927"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": [\n        \"Price must be less than twenty. Remember our target audience!\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"pizza_type\": {\r\n    \"id\": \"4\",\r\n    \"name\": \"The Daily\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/pizza_types/4",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pizza_types",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "202 Accepted",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"pizza_type\": {\r\n    \"id\": \"4\",\r\n    \"name\": \"The Daily\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/pizza_types/4",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"pizza_types",
+										"4"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:38:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "973df99e-0fe3-4fe7-82c1-66128ab08507"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.017428"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"name\": \"The Daily\",\n    \"price\": 11,\n    \"order_items\": [],\n    \"orders\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/pizza_types/4",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pizza_types",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/pizza_types/4",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"pizza_types",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:38:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"df58e91f827358af7982daf9b91932cb\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "fc1544a7-7c7f-4278-860e-832fd8e9872e"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.017276"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"name\": \"The Daily\",\n    \"price\": 11,\n    \"order_items\": [],\n    \"orders\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://chronicle-pizza.herokuapp.com/api/v1/pizza_types/1",
+							"protocol": "https",
+							"host": [
+								"chronicle-pizza",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pizza_types",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://chronicle-pizza.herokuapp.com/api/v1/pizza_types/1",
+									"protocol": "https",
+									"host": [
+										"chronicle-pizza",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"pizza_types",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2019 00:38:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"d3af822567d688ec0cc22431ee143d3a\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "bb855e24-14a4-43dd-8436-eec16736f1a0"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.010300"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Margherita\",\n    \"price\": 8,\n    \"order_items\": [],\n    \"orders\": []\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.954yktgo75GYlrGXI__8rV5g3j7C_pfowdD96513HmE",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "24b8cab5-7e0b-4815-a3e0-3576cee5ec06",
+			"key": "Server 1",
+			"value": "DefaultParameterValue",
+			"type": "string"
+		}
+	]
+}
