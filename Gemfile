@@ -37,10 +37,8 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
-group :test do
-  gem 'factory_bot_rails'
-  gem 'rspec-rails', '~> 3.5'
-end
+gem 'factory_bot_rails'
+gem 'rspec-rails', '~> 3.5'
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
