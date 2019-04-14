@@ -12,7 +12,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def show
-    render json: @current_user, status: :ok
+    render json: @user, status: :ok
   end
 
   def create
@@ -28,11 +28,11 @@ class Api::V1::UsersController < ApplicationController
   def update
     params[:user].delete(:password) if params[:user][:password].blank?
 
-    @current_user.update(user_params)
-    if @current_user.save
-      render json: @current_user, status: :accepted
+    @user.update(user_params)
+    if @user.save
+      render json: @user, status: :accepted
     else
-      render json: { errors: @current_user.errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
@@ -49,6 +49,6 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def find_user
-    @current_user = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 end
