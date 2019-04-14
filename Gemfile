@@ -52,6 +52,7 @@ gem 'active_model_serializers'
 
 gem 'geocoder'
 
+gem 'factory_bot_rails'
 gem 'rspec-rails', '~> 3.5'
 
 gem 'rswag'
