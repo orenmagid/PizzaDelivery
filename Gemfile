@@ -35,6 +35,8 @@ gem 'rack-cors'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
@@ -51,8 +53,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'active_model_serializers'
 
 gem 'geocoder'
-
-gem 'factory_bot_rails'
-gem 'rspec-rails', '~> 3.5'
 
 gem 'rswag'

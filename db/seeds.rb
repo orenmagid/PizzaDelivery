@@ -19,8 +19,10 @@ address_1 = Address.create(location: '1645 Branch Valley Dr. Roswell, GA 20076')
 address_2 = Address.create(location: '2475 Virginia Ave. NW, Washington, DC 20037')
 address_3 = Address.create(location: '1745 Branch Valley Dr. Roswell, GA 20076')
 address_4 = Address.create(location: '2175 Virginia Ave. NW, Washington, DC 20037')
+demoUser.addresses << address_2
 demoUser.addresses << address_3
 anotherUser.addresses << address_4
+anotherUser.addresses << address_1
 
 pizza_type_config = [{ name: 'Margherita', price: 8 }, { name: 'Pepperoni', price: 9 }, { name: 'Chronicle Special', price: 10 }, { name: 'The Daily', price: 11 }]
 
