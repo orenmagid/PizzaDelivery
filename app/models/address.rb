@@ -3,9 +3,9 @@ class Address < ApplicationRecord
   belongs_to :user
   has_many :orders
 
-  validates :location, presence: true, allow_blank: false
+  validates :location, presence: true
   validates :user_id, presence: true
-  validate :within_range_of_chronicle, if: -> { location != '1255 23rd St NW, Washington, DC 20037' }
+  validate :within_range_of_chronicle, if: -> { location != '1255 23rd St NW, Washington, DC 20037' && location != '' }
 
   geocoded_by :location
   after_validation :geocode, if: ->(obj) { obj.location.present? && obj.location_changed? }
