@@ -29,6 +29,7 @@ class Api::V1::OrdersController < ApplicationController
         @order.address = address
         @order.user = @current_user
         @order.date_time = Time.now
+        binding.pry
         if @order.save
           render json: @order, status: :created
         else
