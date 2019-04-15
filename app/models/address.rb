@@ -3,7 +3,7 @@ class Address < ApplicationRecord
   belongs_to :user
   has_many :orders
 
-  validates :location, presence: true
+  validates :location, presence: true, allow_blank: false
   validates :user_id, presence: true
   validate :within_range_of_chronicle, if: -> { location != '1255 23rd St NW, Washington, DC 20037' && location != '' }
 

@@ -1,3 +1,4 @@
+require 'pry'
 class Api::V1::AddressesController < ApplicationController
   before_action :find_address, only: %i[update show destroy]
 
@@ -12,7 +13,12 @@ class Api::V1::AddressesController < ApplicationController
 
   def create
     @address = Address.new(address_params)
-    @address.user = @current_user
+
+    @address.user = if params[:address][:user_id]
+                      User.find_by(id: params[:address][:user_id])
+                    else
+                      @current_user
+                    end
 
     if @address.save
 
