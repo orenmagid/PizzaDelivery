@@ -19,9 +19,9 @@ RSpec.describe Address, type: :model do
     end
 
     it 'should return an error if address cannot be geocoded' do
-      address = build :address, location: ',sd,'
+      address = build :address, location: '  '
       expect(address).not_to be_valid
-      expect(address.errors.messages[:base]).not_to be_nil
+      expect(address.errors.messages[:base]).to include('This address cannot be geocoded. Please try again.')
     end
   end
 end

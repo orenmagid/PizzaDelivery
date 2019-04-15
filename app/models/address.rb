@@ -16,20 +16,23 @@ class Address < ApplicationRecord
     chronicle_address = Address.find(1)
 
     # If the geocoder fails to find coorindates, this fails
-    geolocatable = Geocoder.search(location)
-    if !geolocatable.nil?
-      coordinates = geolocatable.first.coordinates
+
+    results = Geocoder.search(location).first
+
+    if results.nil?
+
+      errors.add(:base, 'This address cannot be geocoded. Please try again.')
 
     else
-      errors.add(:base, "This address can't be geocoded. Please try again.")
 
+      coordinates = results.coordinates
+
+      distance_from_chronicle =
+        chronicle_address.distance_from([coordinates[0], coordinates[1]])
+
+      error = "You are #{distance_from_chronicle} miles from the Chronicle. We are located at 1255 23rd St NW # 700, Washington, DC 20037. Let us know when you are a bit closer, and we would be happy to deliver."
+
+      errors.add(:base, error) if distance_from_chronicle > 25
     end
-
-    distance_from_chronicle =
-      chronicle_address.distance_from([coordinates[0], coordinates[1]])
-
-    error = "You are #{distance_from_chronicle} miles from the Chronicle. We are located at 1255 23rd St NW # 700, Washington, DC 20037. Let us know when you are a bit closer, and we would be happy to deliver."
-
-    errors.add(:base, error) if distance_from_chronicle > 25
   end
 end
