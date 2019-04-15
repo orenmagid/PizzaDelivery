@@ -10,21 +10,25 @@ describe Api::V1::AddressesController do
     end
 
     it 'should return proper json' do
-      # create_list :address, 2
-      # get :index
-      # json = JSON.parse(response.body)
-      # address = json['address']
-      # expect(json_data.length).to eq(2)
-      # expect(json_data[0]['attributes']).to eq(
-      #   'title' => 'My awesome article 1',
-      #   'content' => 'The content of my awesome article 1',
-      #   'slug' => 'my-awesome-article-1'
-      # )
-      # expect(json_data[1]['attributes']).to eq(
-      #   'title' => 'My awesome article 2',
-      #   'content' => 'The content of my awesome article 2',
-      #   'slug' => 'my-awesome-article-2'
-      # )
+      get :index
+      json = JSON.parse(response.body)
+
+      Address.recent(2).each_with_index do |_address, _index|
+        expect(json[0]['location']).to eql(
+          '1255 23rd St NW, Washington, DC 20037'
+        )
+        expect(json[1]['location']).to eql(
+          '2475 Virginia Ave. NW, Washington, DC 20037'
+        )
+      end
+
+      it 'should return articles in the proper order' do
+        old_article = create :article
+        newer_article = create :article
+        subject
+        expect(json_data.first['id']).to eq(newer_article.id.to_s)
+        expect(json_data.last['id']).to eq(old_article.id.to_s)
+      end
     end
   end
 end
