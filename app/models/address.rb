@@ -15,7 +15,15 @@ class Address < ApplicationRecord
   def within_range_of_chronicle
     chronicle_address = Address.find(1)
 
-    coordinates = Geocoder.search(location).first.coordinates
+    # If the geocoder fails to find coorindates, this fails
+    geolocatable = Geocoder.search(location)
+    if !geolocatable.nil?
+      coordinates = geolocatable.first.coordinates
+
+    else
+      errors.add(:base, "This address can't be geocoded. Please try again.")
+
+    end
 
     distance_from_chronicle =
       chronicle_address.distance_from([coordinates[0], coordinates[1]])

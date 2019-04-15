@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :address, class: Address do
-    location { '2475 Virginia Avenue NW, Washington, DC 20037' }
-    user_id { 2 }
+    sequence(:location) { |_n| '2475 Virginia Ave NW, Washington, DC 20037' }
+    sequence(:user_id, &:to_s)
   end
 end
