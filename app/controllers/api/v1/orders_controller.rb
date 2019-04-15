@@ -15,26 +15,23 @@ class Api::V1::OrdersController < ApplicationController
   def create
     address = Address.find(params[:order][:address_id])
     @order = Order.new
-    order_items = params[:order][:order_items] || params[:order_items]
+    order_items = params[:order][:order_items]
     if order_items.length === 0
-      render json: { errors: 'Please add items to your order.' }, status: :bad_request
+      render(json: { errors: 'Please add items to your order.' }, status: :bad_request) && return
     else
-
       order_items.each do |order_item|
         order_item.permit!
         @item = OrderItem.new(order_item)
         @order.order_items << @item
-
-        @order.calculate_tax_and_total
-        @order.address = address
-        @order.user = @current_user
-        @order.date_time = Time.now
-        binding.pry
-        if @order.save
-          render json: @order, status: :created
-        else
-          render json: { errors: @order.errors.full_messages }, status: :unprocessable_entity
-        end
+      end
+      @order.calculate_tax_and_total
+      @order.address = address
+      @order.user = @current_user
+      @order.date_time = Time.now
+      if @order.save
+        render(json: @order, status: :created) && return
+      else
+        render(json: { errors: @order.errors.full_messages }, status: :unprocessable_entity) && return
       end
     end
   end
