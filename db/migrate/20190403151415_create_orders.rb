@@ -7,6 +7,7 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.decimal :tax
       t.decimal :total
       t.decimal :discount
+      t.timestamps
     end
   end
 end

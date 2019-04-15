@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2019_04_04_232008) do
     t.integer "pizza_type_id"
     t.integer "order_id"
     t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "orders", force: :cascade do |t|
@@ -37,11 +39,15 @@ ActiveRecord::Schema.define(version: 2019_04_04_232008) do
     t.decimal "tax"
     t.decimal "total"
     t.decimal "discount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pizza_types", force: :cascade do |t|
     t.string "name"
     t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -51,6 +57,8 @@ ActiveRecord::Schema.define(version: 2019_04_04_232008) do
     t.string "email"
     t.string "address"
     t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

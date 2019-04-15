@@ -4,6 +4,7 @@ class CreateOrderItem < ActiveRecord::Migration[5.2]
       t.integer :pizza_type_id
       t.integer :order_id
       t.integer :quantity
+      t.timestamps
     end
   end
 end
