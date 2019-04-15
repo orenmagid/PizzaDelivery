@@ -9,4 +9,6 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { in: 6..20 }, if: proc { |obj| !obj.password.blank? }
 
   validates_presence_of :first_name, :last_name, :email
+
+  scope :recent, -> { order(created_at: :desc) }
 end

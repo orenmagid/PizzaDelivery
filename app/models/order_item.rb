@@ -5,6 +5,8 @@ class OrderItem < ApplicationRecord
   validates_presence_of :pizza_type
   validate :quantity_greater_than_zero_and_less_than_twenty
 
+  scope :recent, -> { order(created_at: :desc) }
+
   private
 
   def quantity_greater_than_zero_and_less_than_twenty

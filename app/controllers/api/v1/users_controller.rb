@@ -3,7 +3,7 @@ class Api::V1::UsersController < ApplicationController
   before_action :find_user, only: %i[show update]
 
   def index
-    @users = User.all
+    @users = User.recent
     render json: @users, status: :ok
   end
 

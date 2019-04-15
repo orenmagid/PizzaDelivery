@@ -6,6 +6,8 @@ class Order < ApplicationRecord
 
   accepts_nested_attributes_for :order_items
 
+  scope :recent, -> { order(created_at: :desc) }
+
   def calculate_tax_and_total
     order_items = self.order_items
     total = order_items.reduce(0) { |sum, num| sum + num.pizza_type.price }

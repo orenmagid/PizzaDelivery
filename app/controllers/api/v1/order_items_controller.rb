@@ -2,7 +2,7 @@ class Api::V1::OrderItemsController < ApplicationController
   before_action :find_order_item, only: %i[update show destroy]
 
   def index
-    @order_items = OrderItem.all
+    @order_items = OrderItem.recent
     render json: @order_items
   end
 

@@ -4,7 +4,7 @@ class Api::V1::OrdersController < ApplicationController
   before_action :find_order, only: %i[show update destroy]
 
   def index
-    @orders = Order.all
+    @orders = Order.recent
     render json: @orders, status: :ok
   end
 
