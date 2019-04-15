@@ -2,7 +2,7 @@ class Api::V1::AddressesController < ApplicationController
   before_action :find_address, only: %i[update show destroy]
 
   def index
-    @addresses = Address.all
+    @addresses = Address.recent
     render json: @addresses, status: :ok
   end
 

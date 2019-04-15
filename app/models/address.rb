@@ -10,7 +10,7 @@ class Address < ApplicationRecord
   geocoded_by :location
   after_validation :geocode, if: ->(obj) { obj.location.present? && obj.location_changed? }
 
-  scope :recent, ->(num) { order('created_at DESC').limit(num) }
+  scope :recent, -> { order(created_at: :desc) }
 
   private
 

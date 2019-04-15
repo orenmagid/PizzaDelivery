@@ -9,25 +9,27 @@ describe Api::V1::AddressesController do
       expect(response).to have_http_status(:ok)
     end
 
-    it 'should return proper json' do
+    it 'should return proper json, and in proper order' do
+      create_list :address, 2
       get :index
       json = JSON.parse(response.body)
 
-      Address.recent(2).each_with_index do |_address, _index|
-        expect(json[0]['location']).to eql(
-          '1255 23rd St NW, Washington, DC 20037'
+      Address.recent.each_with_index do |_address, _index|
+        expect(json[0]['location']).to eq(
+          '2475 Virginia Ave NW, Washington, DC 20037'
         )
-        expect(json[1]['location']).to eql(
-          '2475 Virginia Ave. NW, Washington, DC 20037'
+        expect(json[0]['user_id']).to eq(
+          2
         )
-      end
-
-      it 'should return articles in the proper order' do
-        old_article = create :article
-        newer_article = create :article
-        subject
-        expect(json_data.first['id']).to eq(newer_article.id.to_s)
-        expect(json_data.last['id']).to eq(old_article.id.to_s)
+        expect(json[1]['location']).to eq(
+          '2475 Virginia Ave NW, Washington, DC 20037'
+        )
+        expect(json[1]['user_id']).to eq(
+          1
+        )
+        expect(json.last['user_id']).to eq(
+          1
+        )
       end
     end
   end
